@@ -67,6 +67,7 @@ nav{
 }
 .banner{
     height: calc(100vh - 80px);
+    min-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -218,12 +219,88 @@ nav{
     border: 2px solid #FF008E;
 }
 footer{
+    margin-top: 50px;
    height: 50px; 
    display: flex;
    justify-content: center;
    align-items: center;
    
 }
+/* navbar part */
+
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* responsive css */
+
+@media (max-width:950px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    .banner-left h2{
+        font-size: 35px;
+    }
+    
+}
+@media (max-width:800px) {
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    .feature-title,
+    .about,
+    .feature,
+    .gallery,
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-img img{
+        width: 500px;
+        align-items: center;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0;
+        transform: translateY(-330px);
+        transition: .3s;
+    }
+    .navigation li a{
+        color: black;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
