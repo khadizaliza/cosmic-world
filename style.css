@@ -56,6 +56,10 @@ nav{
     font-weight: 600;
     padding: 15px 10px;
 }
+.navigation li a:hover{
+    color: #FF008E;
+    transition: .3s;
+}
 .container{
     max-width: 1200;
     margin: 0 auto;
@@ -104,9 +108,18 @@ nav{
     text-align: center;
 }
 /* Feature part css */
+.feature-title{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.feature-img img{
+   width: 100%;
+}
 .feature{
     display: grid;
-    gap: 30px;
+    gap: 40px;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
@@ -138,6 +151,35 @@ nav{
 .card a{
     text-decoration: none;
     color: #FF008E;
+}
+/* about part css */
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.about-photo img{
+    width: 100%;
+}
+.about-title{
+    font-size: 30px;
+    color: #FF008E;
+    padding: 20px;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.about-right p{
+    margin: 20px;
+    line-height: 30px;
+}
+.about-right button{
+    margin: 20px;
+    
 }
 
 /* galler part css */
